@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #e7f03a, green);
+}
+
+.container {
+    text-align: center;
+    background-color: #c2a476;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+}
+
+.title h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    color: #fa6925;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 80px;
+    background-color: #624c3c;
+    border-radius: 50% / 40%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mole {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background-image: url('funny_face.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: popUp 1s ease-in-out;
+}
+
+
+@keyframes popUp {
+    0% {
+        transform: translate(-50%, 100%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.hammer {
+    width: 60px;
+    height: 60px;
+    background-image: url('wooden_hammer.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    cursor: none; 
+    pointer-events: none; 
+}
